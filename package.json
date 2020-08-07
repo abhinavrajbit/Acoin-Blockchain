@@ -4,11 +4,12 @@
   "description": "It is block chain project",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node server.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "postinstall": "ng build --aot --prod"
   },
   "dependencies": {
     "@angular/animations": "^8.2.14",
@@ -22,6 +23,7 @@
     "@angular/router": "^8.2.14",
     "SavjeeCoin": "github:SavjeeTutorials/SavjeeCoin#5cc294c488604546526bf277eceef9ea443b762b",
     "core-js": "^2.6.5",
+    "express": "^4.17.1",
     "node-sass": "^4.12.0",
     "rxjs": "~6.5.3",
     "zone.js": "^0.9.1"
@@ -48,5 +50,10 @@
     "typescript": "~3.5.0"
   },
   "author": "Abhinav Raj",
-  "license": "MIT"
+  "license": "MIT",
+
+  "engines" : {
+    "node": "~12.14.0",
+    "npm" : "~6.13.4"
+  }
 }
